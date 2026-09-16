@@ -1,0 +1,77 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-09-16T09:21:19Z",
+  "title": "Design System: Timmy Digital",
+  "extensions": {
+    "typographyMeta": {
+      "display": { "displayName": "Display", "purpose": "Hero headline" },
+      "headline": { "displayName": "Headline", "purpose": "Section headlines" },
+      "title": { "displayName": "Title", "purpose": "Service and starting point headings" },
+      "body": { "displayName": "Body", "purpose": "Service and supporting copy" },
+      "label": { "displayName": "Label", "purpose": "Buttons and navigation" }
+    },
+    "breakpoints": [
+      { "name": "wide-to-compact", "value": "1050px" },
+      { "name": "mobile", "value": "760px" },
+      { "name": "small-mobile", "value": "440px" }
+    ],
+    "motion": [
+      { "name": "button-state", "value": "ease 0.25s", "purpose": "Button background, color, and lift" },
+      { "name": "menu-state", "value": "ease 0.2s", "purpose": "Mobile menu icon transformation" }
+    ]
+  },
+  "components": [
+    {
+      "name": "Dark Button",
+      "kind": "button",
+      "refersTo": "button-dark",
+      "description": "Filled action on a light surface.",
+      "html": "<a class=\"ds-button-dark\" href=\"#services\">Explore our services <span aria-hidden=\"true\">↗</span></a>",
+      "css": ".ds-button-dark { display:inline-flex; align-items:center; justify-content:space-between; gap:35px; min-height:60px; padding:20px 24px; background:var(--ink,#142c28); color:var(--cream,#f3f6ef); font:600 14px 'DM Sans',sans-serif; text-decoration:none; transition:background .25s,transform .25s; } .ds-button-dark:hover { background:#28554b; transform:translateY(-2px); } .ds-button-dark:focus-visible { outline:3px solid var(--orange,#f46e43); outline-offset:4px; }"
+    },
+    {
+      "name": "Light Button",
+      "kind": "button",
+      "refersTo": "button-light",
+      "description": "Filled email action on the dark contact surface.",
+      "html": "<a class=\"ds-button-light\" href=\"mailto:timmychiew91@gmail.com\">Email Timmy Digital <span aria-hidden=\"true\">↗</span></a>",
+      "css": ".ds-button-light { display:inline-flex; align-items:center; justify-content:space-between; gap:35px; min-height:60px; padding:20px 24px; background:var(--cream,#f3f6ef); color:var(--ink,#142c28); font:600 14px 'DM Sans',sans-serif; text-decoration:none; transition:background .25s,transform .25s; } .ds-button-light:hover { background:#e5e9db; transform:translateY(-2px); } .ds-button-light:focus-visible { outline:3px solid var(--orange,#f46e43); outline-offset:4px; }"
+    },
+    {
+      "name": "Navigation Link",
+      "kind": "nav",
+      "description": "Plain desktop navigation with a signal-color hover and visible focus.",
+      "html": "<nav class=\"ds-nav\" aria-label=\"Example navigation\"><a href=\"#services\">Services</a><a href=\"#starting-points\">Starting points</a></nav>",
+      "css": ".ds-nav { display:flex; align-items:center; gap:32px; font:600 14px 'DM Sans',sans-serif; color:var(--ink,#142c28); } .ds-nav a { color:inherit; text-decoration:none; } .ds-nav a:hover { color:var(--orange,#f46e43); } .ds-nav a:focus-visible { outline:3px solid var(--orange,#f46e43); outline-offset:4px; }"
+    },
+    {
+      "name": "Service Row",
+      "kind": "custom",
+      "description": "Visible situation and service explanation, divided by fine rules.",
+      "html": "<article class=\"ds-service\"><p class=\"ds-service-situation\">People arrive, but they are not sure what you do or what to do next.</p><div class=\"ds-service-detail\"><h3>Websites &amp; development</h3><p>Make your offer easier to understand with a website or landing page.</p></div></article>",
+      "css": ".ds-service { display:grid; grid-template-columns:minmax(240px,.62fr) 1fr; gap:9vw; padding:42px 0 46px; border-top:1px solid var(--line,#cdd2c7); color:var(--ink,#142c28); } .ds-service-situation { max-width:320px; margin:2px 0 0; color:var(--muted,#465c51); font:400 17px/1.55 'DM Sans',sans-serif; } .ds-service-detail h3 { margin:0 0 16px; font:700 36px/1.1 'Bricolage',sans-serif; letter-spacing:-.035em; } .ds-service-detail p { max-width:630px; margin:0; font:400 17px/1.62 'DM Sans',sans-serif; }"
+    },
+    {
+      "name": "Starting Point",
+      "kind": "custom",
+      "description": "A bordered text block for one of two business starting situations.",
+      "html": "<div class=\"ds-path\"><h3>Starting from scratch?</h3><p>Begin with a clear explanation of what you offer and an easy way for people to contact you.</p></div>",
+      "css": ".ds-path { padding:43px 6vw 51px 16px; border-top:1px solid var(--ink,#142c28); border-bottom:1px solid var(--ink,#142c28); color:var(--ink,#142c28); } .ds-path h3 { margin:0 0 19px; font:700 34px/1.1 'Bricolage',sans-serif; letter-spacing:-.035em; } .ds-path p { max-width:520px; margin:0; color:var(--muted,#465c51); font:400 17px/1.65 'DM Sans',sans-serif; }"
+    }
+  ],
+  "narrative": {
+    "northStar": "Connected Paths",
+    "overview": "An editorial layout pairs the direct hero offer with a diagram of the ways a small business can be found. Below it, visible explanations lead from familiar business situations to relevant services, then to two possible starting points and an email conversation. Strong display type, broad color fields, and fine dividers keep the long page legible. This is a starting identity pending owner review.",
+    "keyCharacteristics": ["clear hierarchy", "purposeful color", "visible connections between services", "direct language"],
+    "rules": [],
+    "dos": [
+      "Do keep service explanations readable for New Zealand small business owners.",
+      "Do use signal color deliberately and keep text contrast high.",
+      "Do keep service content visible without requiring interaction."
+    ],
+    "donts": [
+      "Don't add unverified results, clients, certifications, or testimonials.",
+      "Don't replace the open editorial sections with generic cards or dashboards."
+    ]
+  }
+}
